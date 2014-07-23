@@ -1,0 +1,19 @@
+{
+    "name": "x-random-string",
+    "version": "0.0.0",
+    "description": "Generates a random string [0-9][A-Z][a-z]",
+    "license": "MIT",
+    "main": "dist/x-random-string.html",
+    "keywords": [
+        "polymer",
+        "web-components"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#~0.3.3"
+    }
+}
