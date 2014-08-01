@@ -12,6 +12,7 @@
     (function() {
 
         var characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var lengthLimit = 1000;
 
         Polymer('random-string', {
 
@@ -26,6 +27,9 @@
             generate: function() {
                 this.value = "";
                 var i = this.length;
+                if (i > lengthLimit) {
+                    i = lengthLimit;
+                }
                 while (i--) {
                     var j = Math.floor(Math.random()*characters.length);
                     this.value += characters.charAt(j);
@@ -34,6 +38,10 @@
 
             lengthChanged: function(oldVal, newVal) {
                 this.generate();
+            },
+
+            limit: function() {
+                return lengthLimit;
             }
         });
     }());
