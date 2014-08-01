@@ -1,0 +1,42 @@
+<!-- Import Polymer -->
+<link rel="import" href="../../polymer/polymer.html">
+
+<!-- Define your custom element -->
+<polymer-element name="random-string" attributes="length">
+
+    <template>
+        {{value}}
+    </template>
+
+    <script>
+    (function() {
+
+        var characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        Polymer('random-string', {
+
+            length: 20,
+            value: '',
+
+            // Fires when the "<polymer-element>" has been fully prepared
+            ready: function() {
+                this.generate();
+            },
+
+            generate: function() {
+                this.value = "";
+                var i = this.length;
+                while (i--) {
+                    var j = Math.floor(Math.random()*characters.length);
+                    this.value += characters.charAt(j);
+                }
+            },
+
+            lengthChanged: function(oldVal, newVal) {
+                this.generate();
+            }
+        });
+    }());
+    </script>
+
+</polymer-element>

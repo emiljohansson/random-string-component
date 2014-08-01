@@ -2,17 +2,27 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>&lt;x-random-string&gt;</title>
+    <title>&lt;random-string&gt;</title>
 
     <!-- Importing Web Component's Polyfill -->
     <script src="bower_components/platform/platform.js"></script>
 
     <!-- Importing Custom Elements -->
-    <link rel="import" href="src/x-random-string.html">
+    <link rel="import" href="src/random-string.html">
 </head>
 <body>
+    <input
+            value="10"
+            type="int"
+            oninput="document.querySelector('random-string').length = this.value">
 
-    <x-random-string length="10"></x-random-string>
+    <br />
+
+    <random-string length="10"></random-string>
+
+    <script>
+
+    </script>
 
 </body>
 </html>
