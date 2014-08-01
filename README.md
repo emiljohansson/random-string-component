@@ -45,6 +45,7 @@ Attribute     | Options     | Default      | Description
 Method        | Parameters   | Returns     | Description
 ---           | ---          | ---         | ---
 `generate()`  | None.        | Nothing.    | Generates a new string.
+`limit()`     | None.        | int.        | The maximum number of characters.
 
 ## Events
 

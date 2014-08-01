@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <p>Number of characters:
+    <p>Number of characters (limit: <span id="limit"></span>):
 
         <input
             value="10"
@@ -26,7 +26,9 @@
     <random-string length="10"></random-string>
 
     <script>
-
+        window.onload = function() {
+            document.getElementById('limit').innerHTML = document.querySelector('random-string').limit();
+        };
     </script>
 
 </body>
