@@ -1,6 +1,6 @@
 # &lt;random-string&gt;
 
-Generates a random string [0-9][A-Z][a-z].
+A web component that generates a random string [0-9][A-Z][a-z].
 
 ## Demo
 
@@ -34,9 +34,9 @@ Attribute     | Options     | Default      | Description
 
 ## Events
 
-Event         | Description
----           | ---
-`onsomething` | Triggers when something happens.
+Event           | Description
+---             | ---
+`lengthChanged` | Generates a new string.
 
 ## History
 

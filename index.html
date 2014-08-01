@@ -11,12 +11,17 @@
     <link rel="import" href="src/random-string.html">
 </head>
 <body>
-    <input
+
+    <p>Number of characters:
+
+        <input
             value="10"
             type="int"
             oninput="document.querySelector('random-string').length = this.value">
-
+    </p>
     <br />
+
+    <b>Result:</b>
 
     <random-string length="10"></random-string>
 
