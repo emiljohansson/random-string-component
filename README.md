@@ -6,6 +6,14 @@ A web component that generates a random string [0-9][A-Z][a-z].
 
 [Check it live!](http://emiljohansson.github.io/random-string)
 
+## Install
+
+Install the component using [Bower](http://bower.io/):
+
+```sh
+$ bower install random-string --save
+```
+
 ## Usage
 
 1. Import Web Components' polyfill:
@@ -32,11 +40,17 @@ Attribute     | Options     | Default      | Description
 ---           | ---         | ---          | ---
 `length`      | *integer*   | `10`         | The number of characters.
 
+## Methods
+
+Method        | Parameters   | Returns     | Description
+---           | ---          | ---         | ---
+`generate()`  | None.        | Nothing.    | Generates a new string.
+
 ## Events
 
 Event           | Description
 ---             | ---
-`lengthChanged` | Generates a new string.
+`lengthChanged` | Triggers a new string to generate.
 
 ## History
 
