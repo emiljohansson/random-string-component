@@ -16,16 +16,16 @@ $ bower install random-string --save
 
 ## Usage
 
-1. Import Web Components' polyfill:
+1. Import polyfill:
 
     ```html
-    <script src="bower_components/platform/platform.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
     ```
 
 2. Import Custom Element:
 
     ```html
-    <link rel="import" href="bower_components/random-string/dist/random-string.html">
+    <link rel="import" href="bower_components/random-string/random-string.html">
     ```
 
 3. Start using it!
