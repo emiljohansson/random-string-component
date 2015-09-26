@@ -1,50 +1,49 @@
-<!-- Import Polymer -->
-<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../polymer/polymer.html">
 
-<!-- Define your custom element -->
-<polymer-element name="random-string" attributes="length">
-
+<dom-module id="random-string">
     <template>
-        {{value}}
+        <span>{{value}}</span>
     </template>
+</dom-module>
 
-    <script>
-    (function() {
+<script>
+var characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lengthLimit = 1000;
 
-        var characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        var lengthLimit = 1000;
+Polymer({
+    is: 'random-string',
+    properties: {
+        length: {
+            type: Number,
+            value: 20,
+            observer: 'lengthChanged'
+        },
+        value: String
+    },
 
-        Polymer('random-string', {
+    ready: function() {
+        this.generate();
+    },
 
-            length: 20,
-            value: '',
+    generate: function() {
+        this.value = "";
+        var i = this.length;
+        if (i > lengthLimit) {
+            i = lengthLimit;
+        }
+        while (i--) {
+            var j = Math.floor(Math.random() * characters.length);
+            this.value += characters.charAt(j);
+        }
+    },
 
-            // Fires when the "<polymer-element>" has been fully prepared
-            ready: function() {
-                this.generate();
-            },
+    lengthChanged: function(oldVal, newVal) {
+        console.log(oldVal, newVal);
+        this.generate();
+    },
 
-            generate: function() {
-                this.value = "";
-                var i = this.length;
-                if (i > lengthLimit) {
-                    i = lengthLimit;
-                }
-                while (i--) {
-                    var j = Math.floor(Math.random()*characters.length);
-                    this.value += characters.charAt(j);
-                }
-            },
-
-            lengthChanged: function(oldVal, newVal) {
-                this.generate();
-            },
-
-            limit: function() {
-                return lengthLimit;
-            }
-        });
-    }());
-    </script>
-
-</polymer-element>
+    limit: function() {
+        return lengthLimit;
+    }
+});
+</script>
