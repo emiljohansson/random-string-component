@@ -1,6 +1,6 @@
 {
     "name": "random-string",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A web component that generates a random string [0-9][A-Z][a-z]",
     "license": "MIT",
     "main": "random-string.html",
