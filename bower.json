@@ -2,6 +2,6 @@
   "private": true,
   "name": "random-string",
   "dependencies": {
-    "random-string": "~1.0.0"
+    "random-string": "~1.0.1"
   }
 }
