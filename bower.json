@@ -3,18 +3,16 @@
     "version": "0.0.1",
     "description": "A web component that generates a random string [0-9][A-Z][a-z]",
     "license": "MIT",
-    "main": "dist/random-string.html",
+    "main": "random-string.html",
     "keywords": [
         "polymer",
         "web-components"
     ],
     "ignore": [
         "**/.*",
-        "node_modules",
-        "bower_components",
-        "Gruntfile.js"
+        "bower_components"
     ],
     "dependencies": {
-        "polymer": "Polymer/polymer#~0.3.3"
+        "polymer": "Polymer/polymer#^1.0.0"
     }
 }

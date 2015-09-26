@@ -1,6 +1,6 @@
 # &lt;random-string&gt;
 
-A web component that generates a random string [0-9][A-Z][a-z].
+> A web component that generates a random string [0-9][A-Z][a-z].
 
 ## Demo
 
@@ -10,22 +10,24 @@ A web component that generates a random string [0-9][A-Z][a-z].
 
 Install the component using [Bower](http://bower.io/):
 
+Or [download as ZIP](https://github.com//emiljohansson/random-string/archive/update-to-latest-standard.zip).
+
 ```sh
 $ bower install random-string --save
 ```
 
 ## Usage
 
-1. Import Web Components' polyfill:
+1. Import polyfill:
 
     ```html
-    <script src="bower_components/platform/platform.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
     ```
 
 2. Import Custom Element:
 
     ```html
-    <link rel="import" href="bower_components/random-string/dist/random-string.html">
+    <link rel="import" href="bower_components/random-string/random-string.html">
     ```
 
 3. Start using it!

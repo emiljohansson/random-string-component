@@ -1,0 +1,49 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="random-string">
+    <template>
+        <span>{{value}}</span>
+    </template>
+</dom-module>
+
+<script>
+var characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lengthLimit = 1000;
+
+Polymer({
+    is: 'random-string',
+    properties: {
+        length: {
+            type: Number,
+            value: 20,
+            observer: 'lengthChanged'
+        },
+        value: String
+    },
+
+    ready: function() {
+        this.generate();
+    },
+
+    generate: function() {
+        this.value = "";
+        var i = this.length;
+        if (i > lengthLimit) {
+            i = lengthLimit;
+        }
+        while (i--) {
+            var j = Math.floor(Math.random() * characters.length);
+            this.value += characters.charAt(j);
+        }
+    },
+
+    lengthChanged: function(oldVal, newVal) {
+        console.log(oldVal, newVal);
+        this.generate();
+    },
+
+    limit: function() {
+        return lengthLimit;
+    }
+});
+</script>
