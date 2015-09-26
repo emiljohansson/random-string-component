@@ -15,6 +15,6 @@
         "Gruntfile.js"
     ],
     "dependencies": {
-        "polymer": "Polymer/polymer#~0.3.3"
+        "polymer": "Polymer/polymer#^1.0.0"
     }
 }
