@@ -1,6 +1,7 @@
 {
-    "private": true,
-    "name": "random-string",
-    "dependencies": {
-    }
+  "private": true,
+  "name": "random-string",
+  "dependencies": {
+    "random-string": "~1.0.0"
+  }
 }
