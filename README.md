@@ -1,6 +1,6 @@
 # &lt;random-string&gt;
 
-A web component that generates a random string [0-9][A-Z][a-z].
+> A web component that generates a random string [0-9][A-Z][a-z].
 
 ## Demo
 
@@ -9,6 +9,8 @@ A web component that generates a random string [0-9][A-Z][a-z].
 ## Install
 
 Install the component using [Bower](http://bower.io/):
+
+Or [download as ZIP](https://github.com//emiljohansson/random-string/archive/update-to-latest-standard.zip).
 
 ```sh
 $ bower install random-string --save
